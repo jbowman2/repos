@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function loadXMLDoc(){
+
+//1. 
+var xmlhttp = new XMLHttpRequest ();
+var card;
+var $cardParagraph;
+
+//2.
+xmlhttp.onreadystatechange = function() {
+  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+  	card = JSON.parse(xmlhttp.responseText);
+  	$cardParagraph = $("<p>");
+  	$cardParagraph.text(card.rank + " of " + card.suit);
+  	$("#main").append($cardParagraph);
+    }
+  }
+
+//3. Send a http Get request
+xmlhttp.open("GET","aceOfSpades.json",true);
+xmlhttp.send();
+
+}
+
+</script>
+</head>
+<body>
+
+<div id="main"><h2>Let AJAX change this text</h2></div>
+
+<button type="button" onclick="loadXMLDoc()">Change Content
+</button>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+</body>
+</html>
+
