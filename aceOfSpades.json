@@ -1,1 +1,4 @@
-<b>Ace of Spades</b>
+{
+    "rank":"ace",
+    "suit":"spades"
+}
