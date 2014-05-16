@@ -1,2 +1,2 @@
 
-	<b>AJAXified!</b>
+	AJAXified!
