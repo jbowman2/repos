@@ -1,0 +1,6 @@
+
+	{"card1":{"suit" : "spades", "rank" : "ace" }, 
+	"card2":{ "suit" : "hearts", "rank" : "ten" }, 
+	"card3": { "suit" : "spades", "rank" : "five" },
+	"card4": { "suit" : "clubs", "rank" : "three" }, 
+	"card5":{ "suit" : "diamonds", "rank" : "three" }}

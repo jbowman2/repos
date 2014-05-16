@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function loadXMLDoc(){
+
+var xmlhttp = new XMLHttpRequest ();
+var card;
+
+xmlhttp.onreadystatechange = function() 
+{
+  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+  {
+  	card = JSON.parse(xmlhttp.responseText);
+  	$("button").html("<b>" + "<i>" + card.rank + " of " + card.suit + "</b>" + "</i>");
+  	
+    }
+  }
+
+xmlhttp.open("GET", "aceOfSpades.json", true);
+
+xmlhttp.send();
+
+}
+
+</script>
+</head>
+<body>
+
+<div id="myDiv"><h2>Let AJAX change this Button</h2></div>
+
+<button type= "button" onclick="loadXMLDoc()">
+	Change Content
+</button>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+</body>
+</html>
+
