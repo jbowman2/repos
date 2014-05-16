@@ -4,7 +4,7 @@
 <div id="myDiv"><h2>AJAXified Chapter5 Example2</h2>
 </div>
 <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script src="loadJSONhand.js"> </script>
+<script src="../loadJSONhand.js"> </script>
 
 <script type="text/javascript">
 function loadXMLDoc(){
@@ -24,7 +24,7 @@ xmlhttp.onreadystatechange = function()
     }
   }
 
-xmlhttp.open("GET","5cards.json",true);
+xmlhttp.open("GET","../5cards.json",true);
 
 xmlhttp.send();
 }
